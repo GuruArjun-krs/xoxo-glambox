@@ -1,5 +1,6 @@
 
-import './App.css'
+import './index.css'
+import './App.scss'
 import MainRoutes from './Routes'
 import { BrowserRouter } from 'react-router-dom'
 
