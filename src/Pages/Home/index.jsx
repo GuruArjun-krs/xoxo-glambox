@@ -2,9 +2,16 @@ import React from 'react'
 
 const HomePage = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+      <section className='h-screen bg-[red]'>
+
+      </section>
+
+      <section className='h-[calc(100%-70px)] bg-[blue]'>
+
+      </section>
+
+    </>
   )
 }
 
