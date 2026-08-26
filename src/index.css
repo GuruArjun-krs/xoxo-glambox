@@ -37,3 +37,7 @@
   --color-black-700: #44403c;
   --color-black-800: #292524;
 }
+
+html {
+  scroll-behavior: smooth;
+}
