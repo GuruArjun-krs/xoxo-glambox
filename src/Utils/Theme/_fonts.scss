@@ -15,13 +15,41 @@
 @font-face {
     font-family: 'outfit-regular';
     src: url('../../Assets/Fonts/Outfit-Regular.ttf') format('truetype');
-    font-weight: 500;
+    font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'petemoss-regular';
     src: url('../../Assets/Fonts/Petemoss-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dancingScript-regular';
+    src: url('../../Assets/Fonts/DancingScript-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dancingScript-medium';
+    src: url('../../Assets/Fonts/DancingScript-Medium.ttf') format('truetype');
     font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dancingScript-semibold';
+    src: url('../../Assets/Fonts/DancingScript-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dancingScript-bold';
+    src: url('../../Assets/Fonts/DancingScript-Bold.ttf') format('truetype');
+    font-weight: 700;
     font-style: normal;
 }

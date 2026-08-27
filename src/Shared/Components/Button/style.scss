@@ -1,0 +1,26 @@
+.primary_btn {
+    background: rgba(236, 72, 153, 0.28);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.9px);
+    -webkit-backdrop-filter: blur(8.9px);
+    border: 1px solid rgba(236, 72, 153, 0.59);
+}
+
+.secondary_btn {
+    background: rgba(245, 158, 11, 0.27);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.9px);
+    -webkit-backdrop-filter: blur(8.9px);
+    border: 1px solid rgba(245, 158, 11, 0.59);
+}
+
+.danger_btn {
+    background: rgba(244, 63, 94, 0.35);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.9px);
+    -webkit-backdrop-filter: blur(8.9px);
+    border: 1px solid rgba(244, 63, 94, 0.59);
+}

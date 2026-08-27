@@ -32,8 +32,15 @@ const Header = () => {
     };
   }, []);
 
+  const scrollToMainSection = () => {
+    const aboutSection = document.getElementById('main_wrapper');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <div className={`fixed top-0 w-full z-50 h-[70px] flex justify-center items-center transition-all duration-300 bg-transparent`}>
+    <div className={`fixed top-0 w-full z-50 h-[70px]  mx-auto px-4 flex justify-center items-center transition-all duration-300 bg-transparent`}>
       <div className="container relative flex items-center justify-between h-full">
         <a href="#main_wrapper" className="absolute left-[-75px] top-0 w-[250px] h-[110px]">
           <img src={Logo} alt="Logo" className="w-full h-full object-cover" />
