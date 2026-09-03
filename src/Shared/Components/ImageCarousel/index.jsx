@@ -22,7 +22,7 @@ const ImageCarousel = ({ slides, autoPlay = true, interval = 5000 }) => {
     };
 
     return (
-        <div className="relative w-full h-[500px] overflow-hidden shadow-2xl flex items-center justify-center">
+        <div className="relative w-full h-full overflow-hidden shadow-2xl flex items-center justify-center">
             {slides.map((slide, index) => (
                 <div
                     key={`bg-${index}`}

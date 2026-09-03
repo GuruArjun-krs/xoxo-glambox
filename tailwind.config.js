@@ -47,7 +47,7 @@ export default {
           700: '#44403c',
           800: '#292524',
         },
-        white: '#FFFFFF'
+        white: '#FFFFFF',
       }
     },
   },

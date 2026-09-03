@@ -2,27 +2,10 @@ import React, { useLayoutEffect, useRef } from 'react'
 import gsap from 'gsap';
 import { SplitText } from 'gsap/SplitText';
 import './style.scss'
-import { Button, ImageCarousel } from '../../Shared/Components';
+import { Button, ImageCarousel, LightRayBg } from '../../Shared/Components';
+import { sampleSlides, serviceData } from './constant';
 
 gsap.registerPlugin(SplitText);
-
-const sampleSlides = [
-  {
-    image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=80",
-    title: "Bridal Elegance",
-    description: "Flawless, long-lasting makeup looks designed to make your special day truly unforgettable.",
-  },
-  {
-    image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=80",
-    title: "Editorial & Avant-Garde",
-    description: "Bold colors, high-fashion concepts, and creative artistry for magazine shoots and runway shows.",
-  },
-  {
-    image: "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=1200&q=80",
-    title: "Red Carpet Glamour",
-    description: "Sophisticated contouring, glowing skin, and striking eyes tailored for high-profile events.",
-  },
-];
 
 const HomePage = () => {
   const subtitleRef = useRef(null);
@@ -98,12 +81,40 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section id='about_wrapper' ref={aboutRef} className='flex items-center justify-center bg-linear-to-r from-[#efdecd] to-[#C4A484]'>
+      <section id='about_wrapper' ref={aboutRef} className='h-screen flex items-center justify-center bg-linear-to-r from-[#efdecd] to-[#C4A484]'>
         <ImageCarousel slides={sampleSlides} autoPlay={true} interval={4000} />
       </section>
 
       <section id='portfolio_wrapper' className='bg-linear-to-r from-[#efdecd] to-[#C4A484]'></section>
-      <section id='service_wrapper' className='bg-linear-to-r from-[#efdecd] to-[#C4A484]'></section>
+
+      <section id='service_wrapper' className='min-h-screen py-24 bg-neutral-900 text-white'>
+        <div className='container mx-auto px-4'>
+          <div className='text-center mb-16'>
+            <h2 className='text-primary-500 text-sm tracking-widest uppercase mb-2'>Our Expertise</h2>
+            <p className='text-4xl md:text-5xl font-bold'>Signature Services</p>
+          </div>
+
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+            {serviceData.map((service, index) => (
+              <div key={index} className='relative h-[450px] overflow-hidden rounded-xl group cursor-pointer'>
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className='absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110'
+                />
+                <div className='absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent transition-opacity duration-300' />
+
+                <div className='absolute bottom-0 left-0 right-0 p-8 flex flex-col justify-end transition-transform duration-300'>
+                  <h3 className='text-2xl font-bold mb-2'>{service.title}</h3>
+                  <p className='text-gray-300 text-sm opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-40 transition-all duration-500 overflow-hidden'>
+                    {service.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   )
 }
